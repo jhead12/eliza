@@ -1,4 +1,4 @@
-import type { Client, IAgentRuntime } from "@elizaos/core";
+import type { Client, ClientInstance, IAgentRuntime } from "@elizaos/core";
 import { describe, it, expect } from "@jest/globals";
 
 // Helper function to identify client types
@@ -19,24 +19,27 @@ function determineClientType(client: Client): string {
 }
 
 // Mock client implementations for testing
-class MockNamedClient implements Client {
+class MockNamedClient implements Client, ClientInstance {
     type = "named-client";
-    async start(_runtime?: IAgentRuntime) {
+    name = "mock-named-client";
+    async start(_runtime?: IAgentRuntime): Promise<ClientInstance> {
         return this;
     }
     async stop(_runtime?: IAgentRuntime) {}
 }
 
-class MockConstructorClient implements Client {
-    async start(_runtime?: IAgentRuntime) {
+class MockConstructorClient implements Client, ClientInstance {
+    name = "mock-constructor-client";
+    async start(_runtime?: IAgentRuntime): Promise<ClientInstance> {
         return this;
     }
     async stop(_runtime?: IAgentRuntime) {}
 }
 
-const mockPlainClient: Client = {
-    async start(_runtime?: IAgentRuntime) {
-        return {};
+const mockPlainClient: Client & ClientInstance = {
+    name: "mock-plain-client",
+    async start(_runtime?: IAgentRuntime): Promise<ClientInstance> {
+        return mockPlainClient;
     },
     async stop(_runtime?: IAgentRuntime) {},
 };
