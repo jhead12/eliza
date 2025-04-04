@@ -60,7 +60,7 @@ To ensure all environment variables are set up correctly, follow these steps:
 ## Getting Started
 
 ### Prerequisites
-- **Rust**: Install via `rustup`.
+- **Rust**: Install via `rustup`.https://rustup.rs/
 - **wasm-pack**: `cargo install wasm-pack` for WASM compilation.
 - **Node.js**: v14+ recommended.
 - **npm**: For TypeScript dependencies.
