@@ -89,6 +89,30 @@ scripts/bug_hunt/reports/*.md
 
 lit-config.json
 
+<<<<<<< HEAD
+=======
+# Rust specific ignores
+Cargo.lock
+target/
+
+# Ignore specific directories used in Rust development
+rustfmt.toml
+clippy.toml
+
+# Ignore build and test artifacts
+*.rs.bk
+*~
+
+# Ignore IDE configuration files for Rust projects
+.idea/
+.vscode/
+
+# Ignore temporary files created by editors
+*.swp
+*.swo
+*.bak
+
+>>>>>>> 8c5ad0361 (fix gitignore)
 # Configuration to exclude the extra and local_docs directories
 extra
 **/dist/**
@@ -97,4 +121,10 @@ ton_nft_metadata/
 ton_nft_metadata/*
 
 ton_nft_images/
+<<<<<<< HEAD
 ton_nft_images/*
+=======
+ton_nft_images/*
+packages/plugin-filecoin/ref-fvm
+packages/plugin-filecoin/filecoin-rs/target/debug/
+>>>>>>> 8c5ad0361 (fix gitignore)

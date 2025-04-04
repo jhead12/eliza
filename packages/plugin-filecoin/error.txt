@@ -1,0 +1,22 @@
+jeldonmusic@StarshiCommand1 eliza % git push --set-upstream origin File-connector
+Enumerating objects: 9960, done.
+Counting objects: 100% (9949/9949), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (6173/6173), done.
+Writing objects: 100% (9924/9924), 970.63 MiB | 4.28 MiB/s, done.
+Total 9924 (delta 3087), reused 8054 (delta 2321), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3087/3087), completed with 15 local objects.
+remote: warning: File packages/plugin-filecoin/filecoin-rs/target/debug/deps/filecoin_proofs_api-8f5b385865abc9d5.filecoin_proofs_api.75d1e106b705e9f-cgu.09.rcgu.o is 52.72 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB
+remote: warning: File packages/plugin-filecoin/filecoin-rs/target/debug/deps/filecoin_proofs_api-823b4f6a88b24c48.filecoin_proofs_api.12ad934bd4b04bfc-cgu.01.rcgu.o is 63.78 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB
+remote: warning: File packages/plugin-filecoin/filecoin-rs/target/debug/deps/filecoin_proofs_api-823b4f6a88b24c48.filecoin_proofs_api.12ad934bd4b04bfc-cgu.08.rcgu.o is 72.43 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB
+remote: warning: File packages/plugin-filecoin/filecoin-rs/target/debug/deps/filecoin_proofs_api-823b4f6a88b24c48.filecoin_proofs_api.12ad934bd4b04bfc-cgu.10.rcgu.o is 52.73 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB
+remote: warning: File packages/plugin-filecoin/filecoin-rs/target/debug/deps/filecoin_proofs_api-8f5b385865abc9d5.filecoin_proofs_api.75d1e106b705e9f-cgu.01.rcgu.o is 63.78 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB
+remote: warning: File packages/plugin-filecoin/filecoin-rs/target/debug/deps/filecoin_proofs_api-8f5b385865abc9d5.filecoin_proofs_api.75d1e106b705e9f-cgu.02.rcgu.o is 72.50 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB
+remote: error: Trace: 471e8cc500c3634336922261fe1ffab291b8dbfbf798b5d63742aab4bc003e37
+remote: error: See https://gh.io/lfs for more information.
+remote: error: File packages/plugin-filecoin/filecoin-rs/target/debug/deps/libfilecoin_proofs_api-823b4f6a88b24c48.rlib is 466.06 MB; this exceeds GitHub's file size limit of 100.00 MB
+remote: error: File packages/plugin-filecoin/filecoin-rs/target/debug/deps/libfilecoin_proofs_api-8f5b385865abc9d5.rlib is 466.79 MB; this exceeds GitHub's file size limit of 100.00 MB
+remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+To https://github.com/jhead12/eliza.git
+ ! [remote rejected]     File-connector -> File-connector (pre-receive hook declined)
+error: failed to push some refs to 'https://github.com/jhead12/eliza.git'

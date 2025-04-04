@@ -301,3 +301,16 @@ We welcome contributions! Here's how you can help:
 - Add comments for complex logic
 - Update documentation for changes
 - Add tests for new features
+<<<<<<< HEAD
+=======
+
+
+
+
+## Todo
+- Database - File Coin https://github.com/filecoin-project
+- https://docs.filecoin.io/
+- Front Chat 
+- Future: https://v2.tauri.app/
+- 
+>>>>>>> 8c5ad0361 (fix gitignore)

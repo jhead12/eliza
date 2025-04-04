@@ -1,0 +1,2 @@
+[dependencies]
+# opencl-sys = "0.5.0"  # Replace 0.XX with the desired version

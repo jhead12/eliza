@@ -1,0 +1,11 @@
+filecoin-rs/target/
+node_modules
+dist
+*.log
+*.swp
+.vscode/
+.idea/
+filecoin-rs/pkg
+
+packages/plugin-filecoin/filecoin-rs/
+packages/plugin-filecoin/ref-fvm

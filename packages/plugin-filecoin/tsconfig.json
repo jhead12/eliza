@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "../../",
+    "lib": ["ES2021", "DOM"],
+    "target": "ES2022", // Use a stable target instead of ESNext
+    "module": "CommonJS",
+    "strict": true, // Enable strict mode for better type safety
+    "esModuleInterop": true,
+    "skipLibCheck": true, // Consider enabling this if you have control over the libraries used
+    "forceConsistentCasingInFileNames": true,
+    "allowImportingTsExtensions": false, // Generally not needed unless using specific tools
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "resolveJsonModule": true,
+    "noImplicitAny": true,
+    "allowJs": false, // Disable this if you want to enforce TypeScript-only codebase
+    "checkJs": false,
+    "noEmitOnError": true, // Ensure no output is generated on errors
+    "moduleDetection": "auto",
+    "baseUrl": ".",
+    "paths": {
+      "@elizaos/core": ["../core/src"],
+      "@elizaos/core/*": ["../core/src/*"]
+    }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}

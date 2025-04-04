@@ -1,0 +1,126 @@
+-rw-r--r--  1 jeldonmusic  wheel   662 Apr  2 19:20 src/backup.ts
+-rw-r--r--  1 jeldonmusic  wheel   894 Apr  2 19:18 src/client.ts
+-rw-r--r--  1 jeldonmusic  wheel  2691 Apr  2 19:31 src/encryption.ts
+-rw-r--r--  1 jeldonmusic  wheel  4083 Apr  2 19:32 src/filecoin-network.ts
+-rw-r--r--  1 jeldonmusic  wheel  4541 Apr  2 03:02 src/filecoin-rs-bindings.ts
+-rw-r--r--  1 jeldonmusic  wheel  6583 Apr  2 22:54 src/index.ts
+-rw-r--r--  1 jeldonmusic  wheel  3629 Apr  1 22:30 src/performance-monitoring.ts
+-rw-r--r--  1 jeldonmusic  wheel   743 Apr  2 19:24 src/restore.ts
+-rw-r--r--  1 jeldonmusic  wheel  2765 Apr  2 19:18 src/types.ts
+
+src/agent:
+total 8
+drwxr-xr-x   4 jeldonmusic  wheel  128 Apr  2 02:51 .
+drwxr-xr-x  17 jeldonmusic  wheel  544 Apr  2 19:20 ..
+-rw-r--r--   1 jeldonmusic  wheel    0 Apr  2 02:51 agent.ts
+-rw-r--r--   1 jeldonmusic  wheel  491 Apr  2 14:16 intents.ts
+
+src/backup:
+total 0
+drwxr-xr-x   3 jeldonmusic  wheel   96 Mar 31 21:16 .
+drwxr-xr-x  17 jeldonmusic  wheel  544 Apr  2 19:20 ..
+drwxr-xr-x   2 jeldonmusic  wheel   64 Mar 31 21:16 dest
+
+src/database:
+total 72
+drwxr-xr-x   8 jeldonmusic  wheel   256 Apr  2 02:23 .
+drwxr-xr-x  17 jeldonmusic  wheel   544 Apr  2 19:20 ..
+-rw-r--r--   1 jeldonmusic  wheel  9674 Apr  2 03:11 filecoin-adapter.ts
+-rw-r--r--   1 jeldonmusic  wheel  6148 Apr  2 00:48 filecoin.ts
+-rw-r--r--   1 jeldonmusic  wheel   328 Apr  2 02:22 storacha-storage.ts
+-rw-r--r--   1 jeldonmusic  wheel  3475 Apr  1 23:58 storacha.ts
+-rw-r--r--   1 jeldonmusic  wheel   174 Apr  2 02:21 storage.ts
+-rw-r--r--   1 jeldonmusic  wheel   859 Apr  2 12:38 web3-storage.ts
+
+src/interop:
+total 8
+drwxr-xr-x   4 jeldonmusic  wheel  128 Apr  2 02:51 .
+drwxr-xr-x  17 jeldonmusic  wheel  544 Apr  2 19:20 ..
+-rw-r--r--   1 jeldonmusic  wheel    0 Apr  2 02:51 bridge.ts
+-rw-r--r--   1 jeldonmusic  wheel  314 Apr  2 03:04 crosschain.ts
+
+src/logs:
+total 8
+drwxr-xr-x   3 jeldonmusic  wheel   96 Apr  2 18:43 .
+drwxr-xr-x  17 jeldonmusic  wheel  544 Apr  2 19:20 ..
+-rw-r--r--   1 jeldonmusic  wheel  513 Apr  2 18:43 logger.ts
+
+src/network:
+total 8
+drwxr-xr-x   3 jeldonmusic  wheel   96 Apr  1 22:36 .
+drwxr-xr-x  17 jeldonmusic  wheel  544 Apr  2 19:20 ..
+-rw-r--r--   1 jeldonmusic  wheel  273 Apr  1 21:58 network.ts
+
+drwxr-xr-x@ 18 jeldonmusic  wheel   576 Apr  2 20:30 .
+drwxr-xr-x   9 jeldonmusic  wheel   288 Mar 29 14:25 ..
+-rw-r--r--@  1 jeldonmusic  wheel  6148 Mar 31 10:55 .DS_Store
+drwxr-xr-x  12 jeldonmusic  wheel   384 Mar 31 20:56 .git
+-rw-r--r--   1 jeldonmusic  wheel   154 Mar 31 20:56 .gitignore
+drwxr-xr-x   3 jeldonmusic  wheel    96 Apr  2 20:30 .turbo
+-rw-r--r--   1 jeldonmusic  wheel  7191 Mar 31 12:07 README.md
+drwxr-xr-x   5 jeldonmusic  wheel   160 Mar 29 02:29 __test__
+drwxr-xr-x   2 jeldonmusic  wheel    64 Mar 31 09:52 bkup
+-rw-r--r--   1 jeldonmusic  wheel  1360 Apr  2 02:25 env.sample
+-rw-r--r--   1 jeldonmusic  wheel   389 Apr  1 18:32 esbuild.config.js
+drwxr-xr-x   8 jeldonmusic  wheel   256 Apr  2 22:57 filecoin-rs
+drwxr-xr-x  18 jeldonmusic  wheel   576 Apr  2 20:29 node_modules
+-rw-r--r--@  1 jeldonmusic  wheel  2264 Apr  2 22:58 output.txt
+-rw-r--r--   1 jeldonmusic  wheel  1669 Apr  2 19:33 package.json
+drwxr-xr-x  28 jeldonmusic  wheel   896 Mar 25 20:54 ref-fvm
+drwxr-xr-x  17 jeldonmusic  wheel   544 Apr  2 19:20 src
+-rw-r--r--   1 jeldonmusic  wheel  1029 Apr  2 01:47 tsconfig.json
+jeldonmusic@StarshiCommand1 plugin-filecoin % ls -ls
+total 56
+16 -rw-r--r--   1 jeldonmusic  wheel  7191 Mar 31 12:07 README.md
+ 0 drwxr-xr-x   5 jeldonmusic  wheel   160 Mar 29 02:29 __test__
+ 0 drwxr-xr-x   2 jeldonmusic  wheel    64 Mar 31 09:52 bkup
+ 8 -rw-r--r--   1 jeldonmusic  wheel  1360 Apr  2 02:25 env.sample
+ 8 -rw-r--r--   1 jeldonmusic  wheel   389 Apr  1 18:32 esbuild.config.js
+ 0 drwxr-xr-x   8 jeldonmusic  wheel   256 Apr  2 22:57 filecoin-rs
+ 0 drwxr-xr-x  18 jeldonmusic  wheel   576 Apr  2 20:29 node_modules
+ 8 -rw-r--r--@  1 jeldonmusic  wheel  2264 Apr  2 22:58 output.txt
+ 8 -rw-r--r--   1 jeldonmusic  wheel  1669 Apr  2 19:33 package.json
+ 0 drwxr-xr-x  28 jeldonmusic  wheel   896 Mar 25 20:54 ref-fvm
+ 0 drwxr-xr-x  17 jeldonmusic  wheel   544 Apr  2 19:20 src
+ 8 -rw-r--r--   1 jeldonmusic  wheel  1029 Apr  2 01:47 tsconfig.json
+jeldonmusic@StarshiCommand1 plugin-filecoin % ls -la filecoin-rs/**
+-rw-r--r--@ 1 jeldonmusic  wheel  88384 Apr  1 16:58 filecoin-rs/Cargo.lock
+-rw-r--r--  1 jeldonmusic  wheel   1438 Apr  1 16:58 filecoin-rs/Cargo.toml
+
+filecoin-rs/pkg:
+total 496
+drwxr-xr-x  8 jeldonmusic  wheel     256 Apr  2 20:30 .
+drwxr-xr-x  8 jeldonmusic  wheel     256 Apr  2 22:57 ..
+-rw-r--r--  1 jeldonmusic  wheel       1 Apr  2 20:30 .gitignore
+-rw-r--r--  2 jeldonmusic  wheel    1382 Apr  2 20:30 filecoin_rs.d.ts
+-rw-r--r--  2 jeldonmusic  wheel   19986 Apr  2 20:30 filecoin_rs.js
+-rw-r--r--  1 jeldonmusic  wheel  216695 Apr  2 20:30 filecoin_rs_bg.wasm
+-rw-r--r--  1 jeldonmusic  wheel    2747 Apr  2 20:30 filecoin_rs_bg.wasm.d.ts
+-rw-r--r--  1 jeldonmusic  wheel     412 Apr  2 20:30 package.json
+
+filecoin-rs/src:
+total 152
+drwxr-xr-x  14 jeldonmusic  wheel    448 Apr  2 02:47 .
+drwxr-xr-x   8 jeldonmusic  wheel    256 Apr  2 22:57 ..
+-rw-r--r--   1 jeldonmusic  wheel   3711 Mar 30 22:17 actor_state.rs
+drwxr-xr-x   3 jeldonmusic  wheel     96 Apr  2 02:47 dao
+-rw-r--r--   1 jeldonmusic  wheel   6480 Apr  2 14:05 lib.rs
+-rw-r--r--   1 jeldonmusic  wheel    152 Mar 31 01:53 limiter.rs
+-rw-r--r--   1 jeldonmusic  wheel     97 Mar 31 02:36 main.rs
+-rw-r--r--   1 jeldonmusic  wheel    523 Mar 31 01:57 messages.rs
+drwxr-xr-x   3 jeldonmusic  wheel     96 Mar 30 00:36 native
+drwxr-xr-x   3 jeldonmusic  wheel     96 Apr  2 02:46 provenance
+drwxr-xr-x   4 jeldonmusic  wheel    128 Apr  2 02:44 storage
+drwxr-xr-x   3 jeldonmusic  wheel     96 Mar 29 20:50 stubs
+-rw-r--r--@  1 jeldonmusic  wheel  52374 Mar 31 03:09 tree.txt
+drwxr-xr-x   3 jeldonmusic  wheel     96 Mar 31 02:21 wasm
+
+filecoin-rs/target:
+total 16
+drwxr-xr-x@ 7 jeldonmusic  wheel   224 Apr  2 03:20 .
+drwxr-xr-x  8 jeldonmusic  wheel   256 Apr  2 22:57 ..
+-rw-r--r--  1 jeldonmusic  wheel  2607 Apr  2 20:30 .rustc_info.json
+-rw-r--r--  1 jeldonmusic  wheel   177 Apr  2 02:44 CACHEDIR.TAG
+drwxr-xr-x  8 jeldonmusic  wheel   256 Apr  2 02:44 debug
+drwxr-xr-x  8 jeldonmusic  wheel   256 Apr  2 03:20 release
+drwxr-xr-x@ 4 jeldonmusic  wheel   128 Apr  2 03:20 wasm32-unknown-unknown
