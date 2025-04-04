@@ -174,7 +174,7 @@ The `@elizaos/plugin-filecoin` package offers several features that cater to var
 
 For detailed information on each component and feature, refer to the documentation provided:
 
-- [README](docs/README.md)
+- [README](README.md)
 - [Installation Guide](docs/installation-guide.md)
 - [Usage Examples](docs/usage-examples.md)
 - [Feature Overview](docs/feature-overview.md)
