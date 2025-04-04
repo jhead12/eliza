@@ -1,0 +1,1 @@
+// content generation, copyright protection
