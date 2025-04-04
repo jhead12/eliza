@@ -9,7 +9,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true, // Consider enabling this if you have control over the libraries used
     "forceConsistentCasingInFileNames": true,
-    "allowImportingTsExtensions": false, // Generally not needed unless using specific tools
+    "allowImportingTsExtensions": true, // Generally not needed unless using specific tools
     "declaration": true,
     "emitDeclarationOnly": true,
     "resolveJsonModule": true,

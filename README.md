@@ -8,6 +8,7 @@
 
 📑 [Technical Report](https://arxiv.org/pdf/2501.06781) |  📖 [Documentation](https://elizaos.github.io/eliza/) | 🎯 [Examples](https://github.com/thejoven/awesome-eliza)
 
+![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/jhead12/eliza?utm_source=oss&utm_medium=github&utm_campaign=jhead12%2Feliza&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
 </div>
 
 ## 🌍 README Translations
