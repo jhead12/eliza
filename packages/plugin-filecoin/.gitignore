@@ -8,4 +8,3 @@ dist
 filecoin-rs/pkg
 
 packages/plugin-filecoin/filecoin-rs/
-packages/plugin-filecoin/ref-fvm

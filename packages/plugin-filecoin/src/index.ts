@@ -35,6 +35,8 @@ async function initializeAgentRuntime(db: FilecoinDatabaseAdapter): Promise<Agen
         modelProvider: 'OLLAMA' as const,
         lore: 'Default lore', // Add default value
         messageExamples: [], // Add default value
+        conversationLength: undefined,
+
         postExamples: [], // Add default value
         topics: [], // Add default value
         // Add any other missing properties with default values
@@ -43,7 +45,6 @@ async function initializeAgentRuntime(db: FilecoinDatabaseAdapter): Promise<Agen
         token: process.env.AGENT_TOKEN || 'default-token',
         serverUrl: 'http://localhost:7998',
         character: {
-            conversationLength: undefined,
             agentId: uuidv4(),
             character: character,
             token: process.env.AGENT_TOKEN || 'default-token',
