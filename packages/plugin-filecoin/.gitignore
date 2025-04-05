@@ -6,5 +6,5 @@ dist
 .vscode/
 .idea/
 
-
+packages/plugin-filecoin/filecoin-rs/target/debug/.fingerprint
 packages/plugin-filecoin/filecoin-rs/
