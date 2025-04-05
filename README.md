@@ -313,5 +313,9 @@ We welcome contributions! Here's how you can help:
 - https://docs.filecoin.io/
 - Front Chat 
 - Future: https://v2.tauri.app/
+<<<<<<< HEAD
 - 
 >>>>>>> 8c5ad0361 (fix gitignore)
+=======
+- LangChain -langGraph 
+>>>>>>> 27df97247 (enoent file fix)

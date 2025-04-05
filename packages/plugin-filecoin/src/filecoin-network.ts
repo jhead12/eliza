@@ -11,13 +11,16 @@ function convertWasmBackupResult(wasmResult: WasmFilecoinBackupResult): Filecoin
     return {
         success: wasmResult.success,
         metadata: {
-            path: wasmResult.metadata.path,
-            encrypted: wasmResult.metadata.encrypted,
+            path: wasmResult.metadata.path || '', // Provide a default value
+            encrypted: wasmResult.metadata.encrypted || false, // Provide a default value
             compressionLevel: wasmResult.metadata.compressionLevel,
             size: wasmResult.metadata.size
-        }
+        },
+        cid: wasmResult.cid || '', // Provide a default value
+        encrypted: wasmResult.encrypted || false // Provide a default value
     };
 }
+
 
 export class FilecoinRsBindings {
     static async initialize(): Promise<void> {
@@ -42,13 +45,13 @@ export class FilecoinRsBindings {
         try {
             const inputString = typeof data === 'string' ? data : Buffer.from(data).toString('utf8');
             const backupData = encrypted ? encrypt(inputString) : Buffer.from(inputString);
-
+    
             const wasmResult = wasmBackupData(backupData);
             const result = convertWasmBackupResult(wasmResult);
-
+    
             await fs.writeFile(path, backupData);
             result.metadata.path = path;
-
+    
             return result;
         } catch (error) {
             console.error('Backup failed:', error);
@@ -60,7 +63,8 @@ export class FilecoinRsBindings {
                     compressionLevel: undefined,
                     size: undefined
                 },
-                data: undefined
+                cid: '', // Provide a default value
+                encrypted: false // Provide a default value
             };
         }
     }

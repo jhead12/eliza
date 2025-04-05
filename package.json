@@ -12,12 +12,19 @@
     "build": "turbo run build --filter=!eliza-docs",
     "build-docker": "turbo run build",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     "plugin-create":"npx @elizaos/cli@beta create --type plugin",
     "plugin-list":"npx @elizaos/cli@beta project list-plugins",
     "plugin-remove": "npx @elizaos/cli@beta project remove-plugin",
     "plugin-add":"npx @elizaos/cli@beta project add-plugin",
 >>>>>>> 8c5ad0361 (fix gitignore)
+=======
+    "plugin-create": "npx @elizaos/cli@beta create --type plugin",
+    "plugin-list": "npx @elizaos/cli@beta project list-plugins",
+    "plugin-remove": "npx @elizaos/cli@beta project remove-plugin",
+    "plugin-add": "npx @elizaos/cli@beta project add-plugin",
+>>>>>>> 27df97247 (enoent file fix)
     "cleanstart": "if [ -f agent/data/db.sqlite ]; then rm agent/data/db.sqlite; fi && pnpm --filter \"@elizaos/agent\" start --isRoot",
     "cleanstart:debug": "if [ -f agent/data/db.sqlite ]; then rm agent/data/db.sqlite; fi && cross-env NODE_ENV=development VERBOSE=true DEFAULT_LOG_LEVEL=debug DEBUG=eliza:* pnpm --filter \"@elizaos/agent\" start --isRoot",
     "start": "pnpm --filter \"@elizaos/agent\" start --isRoot",
@@ -54,7 +61,7 @@
     "lerna": "8.1.5",
     "nodemon": "3.1.7",
     "only-allow": "1.2.1",
-    "turbo": "2.4.4",
+    "turbo": "2.5.0",
     "typedoc": "0.26.11",
     "typescript": "5.6.3",
     "viem": "2.21.58",

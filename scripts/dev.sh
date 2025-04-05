@@ -74,7 +74,14 @@ if [ ! -d "$PACKAGES_DIR" ]; then
 fi
 
 # List of working folders to watch (relative to $PACKAGES_DIR)
+<<<<<<< HEAD
 WORKING_FOLDERS=() # Core is handled separately
+=======
+WORKING_FOLDERS=(
+  "/plugin-filecoin",
+  "/plugin-filecoin/filecoin_rs",
+) # Core is handled separately
+>>>>>>> 27df97247 (enoent file fix)
 
 # Initialize an array to hold package-specific commands
 COMMANDS=()

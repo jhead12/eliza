@@ -20,9 +20,12 @@
     }
   },
   "files": [
+    "filecoin-rs/pkg" ,
+    "src",
+    "bin",
     "dist",
-    "target",
-    "filecoin-rs/pkg" 
+    "target"
+    
   ],
   "scripts": {
   "start": "npx @elizaos/cli start",

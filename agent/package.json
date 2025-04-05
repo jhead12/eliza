@@ -12,7 +12,8 @@
     "nodemonConfig": {
         "watch": [
             "src",
-            "../core/dist"
+            "../core/dist",
+            "../filecoin-rs/pkg"
         ],
         "ext": "ts,json",
         "exec": "node --enable-source-maps --loader ts-node/esm src/index.ts"
@@ -22,6 +23,11 @@
         "@elizaos/core": "workspace:*",
         "@elizaos/plugin-bootstrap": "workspace:*",
         "@types/node": "^22.13.5",
+<<<<<<< HEAD
+=======
+        "@elizaos-plugins/plugin-filecoin": "workspace:*",
+        "@elizaos-plugins/adapter-sqlite":"workspace:*",
+>>>>>>> 27df97247 (enoent file fix)
         "json5": "2.2.3",
         "ts-node": "^10.9.2",
         "yargs": "17.7.2"
