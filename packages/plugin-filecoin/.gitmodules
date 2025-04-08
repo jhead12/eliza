@@ -1,3 +1,3 @@
 [submodule "packages/plugin-filecoin/ref-fvm"]
-  path = plugin-filecoin/ref-fvm
+  path = packages/plugin-filecoin/ref-fvm
   url = https://github.com/filecoin-project/ref-fvm

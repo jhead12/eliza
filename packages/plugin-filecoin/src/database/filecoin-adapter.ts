@@ -1,6 +1,7 @@
 import { DatabaseAdapter, type IDatabaseAdapter } from '@elizaos/core';
 import type { Account, Goal, Memory, Participant, Relationship, RAGKnowledgeItem, UUID } from '@elizaos/core';
 import fs from 'fs/promises';
+import { encrypt, decrypt } from '../encryption';
 import path from 'path';
 import { StorageProvider } from './storage';
 import { v4 as uuidv4 } from 'uuid';

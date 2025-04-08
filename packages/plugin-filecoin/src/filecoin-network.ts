@@ -10,9 +10,10 @@ import { downloadFromStoracha } from './database/storacha';
 function convertWasmBackupResult(wasmResult: WasmFilecoinBackupResult): FilecoinBackupResult {
     return {
         success: wasmResult.success,
+        cid: wasmResult.metadata.cid, // Ensure this is returned by the WASM module
+        encrypted: wasmResult.metadata.encrypted,
         metadata: {
             path: wasmResult.metadata.path,
-            encrypted: wasmResult.metadata.encrypted,
             compressionLevel: wasmResult.metadata.compressionLevel,
             size: wasmResult.metadata.size
         }
@@ -54,9 +55,10 @@ export class FilecoinRsBindings {
             console.error('Backup failed:', error);
             return {
                 success: false,
+                cid: undefined, // Ensure this is returned by the WASM module
+                encrypted,
                 metadata: {
                     path,
-                    encrypted,
                     compressionLevel: undefined,
                     size: undefined
                 },

@@ -10,19 +10,18 @@ import * as dotenv from 'dotenv';
 
 dotenv.config();
 
-export const getFilecoinClient = () => new storagePlugin({ token: process.env.FILECOIN_API_TOKEN || '' });
-
-export function convertWasmBackupResult(wasmResult: WasmFilecoinBackupResult): FilecoinBackupResult {
+function convertWasmBackupResult(wasmResult: WasmFilecoinBackupResult): FilecoinBackupResult {
     return {
-        cid: 'mock-cid', // Updated later with real CID
-        encrypted: wasmResult.metadata.encrypted ?? false,
         success: wasmResult.success,
+        cid: wasmResult.metadata.cid || 'mock-cid',  // Default value
+        encrypted: wasmResult.metadata.encrypted ?? false,  // Default value
         metadata: {
-            path: wasmResult.metadata.path ?? '',
-            encrypted: wasmResult.metadata.encrypted ?? false,
+            path: wasmResult.metadata.path,
+            cid: wasmResult.metadata.cid,
+            encrypted: wasmResult.metadata.encrypted,
             compressionLevel: wasmResult.metadata.compressionLevel,
-            size: wasmResult.metadata.size,
-        },
+            size: wasmResult.metadata.size
+        }
     };
 }
 
@@ -56,7 +55,7 @@ export class FilecoinRsBindings {
     static async backupDataLocal({
         path = 'backup.bin',
         encrypted = false,
-        data = 'Default backup data',
+        data = 'Default backup data'
     }: {
         path?: string;
         encrypted?: boolean;
@@ -69,28 +68,23 @@ export class FilecoinRsBindings {
             const wasmResult = wasmBackupData(backupData);
             const result = convertWasmBackupResult(wasmResult);
 
-            const client = getFilecoinClient();
-            const blob = new Blob([backupData], { type: 'application/octet-stream' });
-            const file = new File([blob], path);
-            const cid = await client.put([file]);
-
             await fs.writeFile(path, backupData);
-            logger.info(`Backup successful. CID: ${cid}, Path: ${path}`);
-            return { ...result, cid, encrypted, data: backupData };
+            result.metadata.path = path;
+
+            return result;
         } catch (error) {
-            const errorMsg = error instanceof Error ? error.message : String(error);
-            logger.error(`Backup failed: ${errorMsg}`);
+            console.error('Backup failed:', error);
             return {
-                cid: '',
-                encrypted,
                 success: false,
+                cid: 'error-cid',  // Provide a default CID
+                encrypted: encrypted ?? false,  // Use parameter with default
                 metadata: {
-                    path,
-                    encrypted,
+                    path: path,
+                    encrypted: encrypted,  // Include encrypted in metadata
                     compressionLevel: undefined,
-                    size: undefined,
+                    size: undefined
                 },
-                data: undefined,
+                data: undefined
             };
         }
     }

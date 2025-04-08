@@ -1,25 +1,28 @@
 // packages/plugin-filecoin/src/types.ts
-
 import { CID } from 'multiformats/CID';
 
 export type FilecoinCID = CID;
 
 type HashMap<K, V> = Map<K, V>;
 
+// Updated BackupMetadata to include cid
 export interface BackupMetadata {
     path?: string;
+    cid?: string;  // Added to match WASM expectations
     encrypted?: boolean;
     compressionLevel?: number;
     size?: number;
 }
 
+// Updated FilecoinBackupResult to ensure consistency
 export interface FilecoinBackupResult {
-    cid: string;
-    encrypted: boolean;
+    cid: string;  // Always required
+    encrypted: boolean;  // Always required
     success: boolean;
     metadata: {
-        path: string | undefined; // Allow undefined
-        encrypted: boolean | undefined; // Allow undefined
+        path?: string;  // Made fully optional
+        encrypted?: boolean;  // Made fully optional
+        cid?: string;  // Added to match BackupMetadata
         compressionLevel?: number;
         size?: number;
     };
@@ -31,8 +34,6 @@ export interface RestoreOptions {
     destinationPath?: string;
     decryptionKey?: string;
 }
-
-
 
 export interface PerformanceMetrics {
     responseTime: number;
@@ -54,22 +55,26 @@ export interface BackupOptions {
     encrypted?: boolean;
 }
 
-export interface WasmBackupResult {
+export interface WasmFilecoinBackupResult {
     success: boolean;
     metadata: {
-        path: string;
+        path?: string;
+        cid?: string;
+        encrypted?: boolean;
         compressionLevel?: number;
         size?: number;
     };
 }
 
+// Updated conversion function with proper defaults
 export function convertWasmBackupResult(wasmResult: WasmFilecoinBackupResult): FilecoinBackupResult {
     return {
-        cid: 'mock-cid', // Updated later with real CID
-        encrypted: wasmResult.metadata.encrypted ?? false, // Default to false if undefined
+        cid: wasmResult.metadata.cid || 'mock-cid',  // Provide default if undefined
+        encrypted: wasmResult.metadata.encrypted ?? false,  // Default to false
         success: wasmResult.success,
         metadata: {
-            path: wasmResult.metadata.path ?? '', // Default to empty string if undefined
+            path: wasmResult.metadata.path,
+            cid: wasmResult.metadata.cid,
             encrypted: wasmResult.metadata.encrypted ?? false,
             compressionLevel: wasmResult.metadata.compressionLevel,
             size: wasmResult.metadata.size,
@@ -77,11 +82,13 @@ export function convertWasmBackupResult(wasmResult: WasmFilecoinBackupResult): F
     };
 }
 
+// Rest of the interfaces remain unchanged...
 export interface FilecoinClient {
     storage: CID;
     upload(data: Uint8Array): Promise<string>;
     download(cid: string): Promise<Uint8Array>;
 }
+
 
 export interface ActorState {
     balance: number;
