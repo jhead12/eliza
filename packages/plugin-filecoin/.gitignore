@@ -10,3 +10,20 @@ dist
 *.wasm.map
 *.wasm.d.ts
 *.wasm.d.ts.map
+
+packages/plugin-filecoin/filecoin-rs/target
+
+# Ignore Cargo.lock and target directories for Rust projects
+Cargo.lock
+target
+
+# Ignore IntelliJ IDEA Rust plugin files
+.idea/rust/
+
+# Ignore VSCode Rust extension settings
+.vscode/settings.json
+
+# Ignore Rust-generated files
+*.rs.bk
+*.rs.old
+*.rs.swp
