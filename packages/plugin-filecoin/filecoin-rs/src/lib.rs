@@ -1,8 +1,6 @@
 use cid::Cid;
 use multihash_codetable::{Code, MultihashDigest};
 use std::collections::HashMap;
-use wasm_bindgen::prelude::wasm_bindgen;
-use wasm_bindgen::JsValue;
 
 #[cfg(target_arch = "wasm32")]
 use console_log;

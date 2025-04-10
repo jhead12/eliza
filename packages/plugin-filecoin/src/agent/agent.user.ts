@@ -138,7 +138,15 @@ async function main() {
   if (storageDataId) {
     try {
       const downloadedData = await storage.download(storageDataId);
+      // Decrypt data only for owner users
+      const user = await userManager.getUser(userId); // Assuming userId is available in the context
+      if (user && user.role === 'producer') {
       const decryptedData = decrypt(downloadedData);
+        logger.info('Data decrypted successfully:', decryptedData);
+        // Further processing with decryptedData
+      } else {
+        throw new Error('Access denied: User is not authorized to decrypt data');
+      }
       const decryptedString = new TextDecoder().decode(decryptedData);
       logger.info('Data downloaded (hex):', Buffer.from(downloadedData).toString('hex'));
       logger.info('Decrypted data matches original?', decryptedString === dataToBackup);
