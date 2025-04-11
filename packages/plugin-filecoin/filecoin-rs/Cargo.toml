@@ -3,7 +3,7 @@ name = "filecoin-rs"
 version = "0.1.0"
 edition = "2021"
 authors = ["Joshua Head <support@jeldonmusic.com>"]
-description = "Filecoin integrations"
+description = "Filecoin integrations with Tauri UI"
 repository = "https://github.com/jhead12"
 license = "MIT"
 
@@ -21,25 +21,45 @@ cid = "0.11.1"
 multihash-codetable = { version = "0.1.4", features = ["sha2"] }
 anyhow = "1.0"
 wasm-bindgen = "0.2"
-wasm-bindgen-futures = "0.4" # Added for async support
+wasm-bindgen-futures = "0.4" # For async support
 getrandom = { version = "0.2", features = ["js"] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
-fvm_ipld_blockstore = { version = "0.3.1", optional = true }
-console_log = "1.0" # Added for console logging
-log = "0.4" # Added for log::Level
+console_log = "1.0" # For console logging
+log = "0.4" # For log::Level
 opentelemetry-datadog = "0.17.0"
-
-
-[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+# Tauri dependencies (all optional)
+tauri = { version = "2.3.1", optional = true }
+tauri-plugin-window-state = { version = "2.0.0", optional = true }
+tauri-plugin-upload = { version = "2.0.0", optional = true }
+tauri-plugin-shell = { version = "2.0.0", optional = true }
+tauri-plugin-opener = { version = "2.0.0", optional = true }
+tauri-plugin-log = { version = "2.0.0", optional = true }
+# Filecoin dependencies (optional for native builds)
+fvm_ipld_blockstore = { version = "0.3.1", optional = true }
 fvm = { version = "4.6.0", optional = true }
 fvm_shared = { version = "4.6.0", optional = true }
 fvm_ipld_encoding = { version = "0.5.2", optional = true }
 positioned-io = { version = "0.3", optional = true }
 
 [features]
+# Default feature is empty for WASM compatibility
 default = []
-native = ["fvm_ipld_blockstore", "fvm", "fvm_shared", "fvm_ipld_encoding", "positioned-io"]
+fvm_ipld_blockstore = ["dep:fvm_ipld_blockstore"]
+# Native feature enables Tauri and Filecoin dependencies
+# native = [
+#     "tauri",
+#     "tauri-plugin-window-state",
+#     "tauri-plugin-upload",
+#     "tauri-plugin-shell",
+#     "tauri-plugin-opener",
+#     "tauri-plugin-log",
+#     "fvm_ipld_blockstore",
+#     "fvm",
+#     "fvm_shared",
+#     "fvm_ipld_encoding",
+#     "positioned-io"
+# ]
 
 [profile.dev]
 opt-level = 0

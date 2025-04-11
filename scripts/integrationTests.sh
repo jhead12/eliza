@@ -14,3 +14,7 @@ cd "$(dirname "$0")"/..
 
 cd tests
 node test1.mjs
+
+# Compile with Python and Rust
+python3 my_script.py
+rustc my_program.rs -o my_program
