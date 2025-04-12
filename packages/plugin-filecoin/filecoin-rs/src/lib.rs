@@ -15,17 +15,23 @@ pub mod actor_state {
     }
 }
 
+
+
+
 pub mod messages;
 pub mod native;
 #[cfg(target_arch = "wasm32")]
 pub mod wasm;
 
+
+#[cfg(not(target_arch = "wasm32"))]
+pub use fvm_ipld_blockstore::{MemoryBlockstore, Blockstore};
+
 #[cfg(not(target_arch = "wasm32"))]
 use std::sync::Arc;
 #[cfg(not(target_arch = "wasm32"))]
 use anyhow::Result;
-#[cfg(not(target_arch = "wasm32"))]
-pub use fvm_ipld_blockstore::{MemoryBlockstore, Blockstore};
+
 
 #[cfg(not(target_arch = "wasm32"))]
 pub type BlockstoreType = Arc<MemoryBlockstore>;
@@ -146,6 +152,17 @@ pub struct MyMachine {
     blockstore: BlockstoreType,
     limiter: NoopLimiter,
     actors: HashMap<Cid, actor_state::ActorState>,
+}
+
+#[cfg(target_arch = "wasm32")]
+#[wasm_bindgen(start)]
+pub async fn init() -> Result<(), JsValue> {
+    console_log::init_with_level(log::Level::Debug)
+        .map_err(|e| JsValue::from_str(&e.to_string()))?;
+    // Optional: Explicitly register getrandom for WebAssembly
+    #[cfg(feature = "js")]
+    getrandom::register_custom_getrandom!(getrandom::js::get_random_values);
+    Ok(())
 }
 
 #[cfg(target_arch = "wasm32")]

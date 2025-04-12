@@ -16,13 +16,16 @@ name = "filecoin-rs"
 path = "src/main.rs"
 required-features = ["native"]
 
+[build-dependencies]
+# Include build dependencies if necessary
+
 [dependencies]
 cid = "0.11.1"
 multihash-codetable = { version = "0.1.4", features = ["sha2"] }
 anyhow = "1.0"
 wasm-bindgen = "0.2"
 wasm-bindgen-futures = "0.4" # For async support
-getrandom = { version = "0.2", features = ["js"] }
+getrandom = { version = "0.3.2", features = ["wasm_js"] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 console_log = "1.0" # For console logging
@@ -41,25 +44,28 @@ fvm = { version = "4.6.0", optional = true }
 fvm_shared = { version = "4.6.0", optional = true }
 fvm_ipld_encoding = { version = "0.5.2", optional = true }
 positioned-io = { version = "0.3", optional = true }
+rig-core = { version = "0.2.1", optional = true }
 
 [features]
 # Default feature is empty for WASM compatibility
 default = []
 fvm_ipld_blockstore = ["dep:fvm_ipld_blockstore"]
 # Native feature enables Tauri and Filecoin dependencies
-# native = [
-#     "tauri",
-#     "tauri-plugin-window-state",
-#     "tauri-plugin-upload",
-#     "tauri-plugin-shell",
-#     "tauri-plugin-opener",
-#     "tauri-plugin-log",
-#     "fvm_ipld_blockstore",
-#     "fvm",
-#     "fvm_shared",
-#     "fvm_ipld_encoding",
-#     "positioned-io"
-# ]
+native = [
+    "tauri",
+    "tauri-plugin-window-state",
+    "tauri-plugin-upload",
+    "tauri-plugin-shell",
+    "tauri-plugin-opener",
+    "tauri-plugin-log",
+    "fvm_ipld_blockstore",
+    "fvm",
+    "fvm_shared",
+    "fvm_ipld_encoding",
+    "positioned-io",
+    "opentelemetry-datadog",
+    "rig-core",
+]
 
 [profile.dev]
 opt-level = 0
@@ -73,6 +79,9 @@ panic = "unwind"
 incremental = true
 codegen-units = 256
 rpath = false
+
+[target.wasm32-unknown-unknown]
+rustflags = ['--cfg', 'getrandom_backend="wasm_js"']
 
 [profile.release]
 opt-level = 3
