@@ -21,6 +21,7 @@
     "start:debug": "cross-env NODE_ENV=development VERBOSE=true DEFAULT_LOG_LEVEL=debug DEBUG=eliza:* pnpm --filter \"@elizaos/agent\" start --isRoot",
     "dev": "bash ./scripts/dev.sh",
     "setup:start":"bash ./scripts/start.sh",
+    "setup:start:ui":"bash ./scripts/start.sh && cd packages/plugin-filecoin/ pnpm run tauri run",
     "extract-tweets": "bash ./scripts/extracttweets.js",
     "release": "pnpm build && pnpm format && npx lerna publish --no-private --force-publish",
     "clean": "bash ./scripts/clean.sh",
