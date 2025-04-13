@@ -1,6 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/package",
-  "name": "eliza",
+  "name": "eliza-with-filecoin-ai",
+  "description": "",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
     "format": "biome format --write .",
     "lint": "biome lint .",

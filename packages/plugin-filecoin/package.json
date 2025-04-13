@@ -1,11 +1,28 @@
 {
   "name": "@elizaos-plugins/plugin-filecoin",
   "version": "1.0.0",
-  "description": "Filecoin Plugin for ElizaOS",
+  "description": "Filecoin Plugin for ElizaOS is a full stack plugin that provides a seamless integration with Filecoin's storage and retrieval capabilities. It allows users to interact with the Filecoin network, manage storage deals, and retrieve data efficiently.",
   "private": true,
   "author": "Ahead Technologies",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "license": "MIT",
+  "keywords": [
+    "elizaos",
+    "plugin",
+    "filecoin"
+  ],
+  "logo": "https://raw.githubusercontent.com/jhead12/elizaos-plugins/main/plugin-filecoin/logo.png",
+  "galleryBanner": {
+    "color": "#000000",
+    "theme": "dark",
+    "text": "Filecoin Plugin for ElizaOS"
+  },
+  "banner": {
+    "color": "#000000",
+    "theme": "dark",
+    "text": "Filecoin AI by Creative for ElizaOS"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/jhead12/elizaos-plugins/plugin-filecoin"
@@ -28,9 +45,10 @@
     "start": "npx @elizaos/cli start",
     "test-with-cli": "cd ../cli && bun run build && cd ../plugin-starter && elizaos test",
     "dev": "npx @elizaos/cli dev",
-    "generate-pages": "bash ./bin/generate-pages.sh",
+    "dev:wasm": "cd filecoin-rs && wasm-pack build --target nodejs --out-dir pkg && cd ..",
+
     "build": "npm run build:wasm && tsup src",
-    "build:wasm": "cd filecoin-rs && wasm-pack build --target nodejs --out-dir pkg --release && cd ..",
+    "build:wasm": "cd filecoin-rs && wasm-pack build --target nodejs --out-dir pkg --release",
     "build:wasm:dev": "cd filecoin-rs &&  wasm-pack build --target nodejs --out-dir pkg && cd ..",
     "build:ui": "cd filecoin-rs && cd data_miner/src-tauri/ && cargo build && cargo run && cd ../..",
     "build:ui:dev": "cd data_miner/src-tauri/ && cargo build && cargo run --release && cd ../..",
