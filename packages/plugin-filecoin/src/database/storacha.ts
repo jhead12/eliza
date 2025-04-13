@@ -1,4 +1,4 @@
-import axios, { AxiosError } from 'axios';
+import axios, { type AxiosError } from 'axios';
 import { encrypt, decrypt, ENCRYPTION_KEY, ALGORITHM } from '../encryption';
 import { FilecoinBackupResult } from '../types'; // Keep if needed elsewhere
 

@@ -1,7 +1,7 @@
 import { createAxiosClient } from '../network/network';
-import { FilecoinRpcResponse, FilecoinBackupResult } from '../types';
+import type { FilecoinRpcResponse, FilecoinBackupResult } from '../types';
 import { FilecoinRsBindings } from '../filecoin-rs-bindings';
-import { AxiosError } from 'axios';
+import type { AxiosError } from 'axios';
 
 // Configuration
 const FILECOIN_RPC_URL = process.env.FILECOIN_RPC_URL || 'https://api.node.glif.io/rpc/v0';

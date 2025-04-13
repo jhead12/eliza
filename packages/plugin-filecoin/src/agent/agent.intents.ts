@@ -1,4 +1,4 @@
-import { IntentHandler } from 'matrix-blend';
+import type { IntentHandler } from 'matrix-blend';
 import { FilecoinClient } from './filecoin-client';
 
 const agentIntents: IntentHandler[] = [

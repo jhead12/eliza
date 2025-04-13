@@ -1,6 +1,6 @@
 // packages/plugin-filecoin/src/restore.ts
 
-import { RestoreOptions } from './types';
+import type { RestoreOptions } from './types';
 import { filecoinRsRestoreFunction as wasmRestoreFunction } from './filecoin-rs-bindings';
 import logger from './logger';
 
