@@ -4,7 +4,7 @@ import { OTLPTraceExporter } from '@opentelemetry/exporter-trace-otlp-http';
 import { Resource } from '@opentelemetry/resources';
 import { SemanticResourceAttributes } from '@opentelemetry/semantic-conventions';
 import { SimpleSpanProcessor } from '@opentelemetry/sdk-trace-base';
-import { trace, Tracer, Span, context, Context } from '@opentelemetry/api';
+import { trace, type Tracer, type Span, context, Context } from '@opentelemetry/api';
 
 // Initialize the tracer provider
 const exporter = new OTLPTraceExporter();

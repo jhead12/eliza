@@ -1,7 +1,7 @@
 // agent.storage.ts
 import { v4 as uuidv4 } from 'uuid';
-import { ILogger, logger } from './agent.logger'; // Assuming logger has an interface
-import { FilecoinClient, BackupMetadata, FilecoinBackupResult } from '../types';
+import { type ILogger, logger } from './agent.logger'; // Assuming logger has an interface
+import { type FilecoinClient, BackupMetadata, type FilecoinBackupResult } from '../types';
 import * as filecoinRsBindings from '../filecoin-rs-bindings';
 import { injectable, inject } from 'tsyringe'; // Dependency injection
 import { validate } from 'class-validator'; // For data validation
@@ -45,7 +45,7 @@ const defaultFilecoinClient: FilecoinClient = {
 };
 
 // Utility functions with proper error handling
-const encryptData = (data: string, algorithm: string = 'AES-GCM'): Uint8Array => {
+const encryptData = (data: string, algorithm = 'AES-GCM'): Uint8Array => {
   try {
     return new TextEncoder().encode(data);
     // Add real encryption implementation here (e.g., Web Crypto API)

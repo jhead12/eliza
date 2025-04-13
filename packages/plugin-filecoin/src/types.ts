@@ -1,6 +1,6 @@
 // packages/plugin-filecoin/src/types.ts
 
-import { CID } from 'multiformats/cid';
+import type { CID } from 'multiformats/cid';
 
 export type FilecoinCID = CID;
 

@@ -1,0 +1,155 @@
+-rw-r--r--  1 jeldonmusic  wheel  6568 Apr  6 17:23 ./README.md
+-rw-r--r--  1 jeldonmusic  wheel  1360 Apr  6 17:23 ./env.sample
+-rw-r--r--  1 jeldonmusic  wheel   207 Apr 10 03:45 ./environment.yml
+-rw-r--r--  1 jeldonmusic  wheel  2783 Apr  6 17:23 ./error.txt
+-rw-r--r--  1 jeldonmusic  wheel   389 Apr  6 17:23 ./esbuild.config.js
+-rw-r--r--  1 jeldonmusic  wheel  6391 Apr  6 17:23 ./output.txt
+-rw-r--r--  1 jeldonmusic  wheel  2949 Apr 10 11:46 ./package.json
+-rw-r--r--  1 jeldonmusic  wheel  1029 Apr  6 17:23 ./tsconfig.json
+
+./bin:
+total 8
+drwxr-xr-x   4 jeldonmusic  wheel  128 Apr 10 03:45 .
+drwxr-xr-x@ 26 jeldonmusic  wheel  832 Apr 12 13:20 ..
+-rw-r--r--   1 jeldonmusic  wheel    0 Apr 10 03:42 clean-sys.sh
+-rw-r--r--   1 jeldonmusic  wheel  679 Apr  6 17:23 generate-pages.sh
+
+./data:
+total 0
+drwxr-xr-x   3 jeldonmusic  wheel   96 Apr 11 18:44 .
+drwxr-xr-x@ 26 jeldonmusic  wheel  832 Apr 12 13:20 ..
+drwxr-xr-x   2 jeldonmusic  wheel   64 Apr 11 18:44 uploads
+
+./docs:
+total 32
+drwxr-xr-x   6 jeldonmusic  wheel   192 Apr  6 17:23 .
+drwxr-xr-x@ 26 jeldonmusic  wheel   832 Apr 12 13:20 ..
+-rw-r--r--   1 jeldonmusic  wheel    26 Apr  6 17:23 feature-overview.md
+-rw-r--r--   1 jeldonmusic  wheel  7369 Apr  6 17:23 front-end-dev-overview.md
+-rw-r--r--   1 jeldonmusic  wheel    13 Apr  6 17:23 installation-guide.md
+-rw-r--r--   1 jeldonmusic  wheel     0 Apr  6 17:23 usage-example.md
+
+./filecoin-rs:
+total 848
+drwxr-xr-x  12 jeldonmusic  wheel     384 Apr 12 13:04 .
+drwxr-xr-x@ 26 jeldonmusic  wheel     832 Apr 12 13:20 ..
+-rw-r--r--@  1 jeldonmusic  wheel    6148 Apr 10 10:47 .DS_Store
+-rw-r--r--   1 jeldonmusic  wheel  193597 Apr 12 12:00 Cargo.lock
+-rw-r--r--   1 jeldonmusic  wheel    2434 Apr 12 13:18 Cargo.toml
+-rw-r--r--@  1 jeldonmusic  wheel  193598 Apr 12 01:44 bk.txt
+-rw-r--r--   1 jeldonmusic  wheel   25219 Apr 12 02:04 build.log
+drwxr-xr-x   8 jeldonmusic  wheel     256 Apr 10 13:55 data_miner
+drwxr-xr-x   8 jeldonmusic  wheel     256 Apr 10 04:03 pkg
+drwxr-xr-x  18 jeldonmusic  wheel     576 Apr 10 03:48 src
+drwxr-xr-x@  6 jeldonmusic  wheel     192 Apr 12 13:04 target
+drwxr-xr-x   5 jeldonmusic  wheel     160 Apr 11 23:56 tools
+
+./generatedImages:
+total 0
+drwxr-xr-x   2 jeldonmusic  wheel   64 Apr 11 18:44 .
+drwxr-xr-x@ 26 jeldonmusic  wheel  832 Apr 12 13:20 ..
+
+./handlers:
+total 8
+drwxr-xr-x   4 jeldonmusic  wheel  128 Apr 10 04:58 .
+drwxr-xr-x@ 26 jeldonmusic  wheel  832 Apr 12 13:20 ..
+-rw-r--r--   1 jeldonmusic  wheel  831 Apr 10 03:46 handler.py
+-rw-r--r--   1 jeldonmusic  wheel    0 Apr 10 04:58 requirements.txt
+
+./node_modules:
+total 0
+drwxr-xr-x  31 jeldonmusic  wheel  992 Apr 12 13:04 .
+drwxr-xr-x@ 26 jeldonmusic  wheel  832 Apr 12 13:20 ..
+drwxr-xr-x  14 jeldonmusic  wheel  448 Apr 12 13:04 .bin
+drwxr-xr-x   3 jeldonmusic  wheel   96 Apr 12 13:04 @apollo
+drwxr-xr-x   4 jeldonmusic  wheel  128 Apr 12 13:04 @ceramicnetwork
+drwxr-xr-x   5 jeldonmusic  wheel  160 Apr 12 13:04 @elizaos
+drwxr-xr-x   8 jeldonmusic  wheel  256 Apr 12 13:04 @opentelemetry
+drwxr-xr-x   4 jeldonmusic  wheel  128 Apr 12 13:04 @storacha
+drwxr-xr-x   3 jeldonmusic  wheel   96 Apr 12 13:04 @types
+drwxr-xr-x   3 jeldonmusic  wheel   96 Apr 12 13:04 @web3-storage
+lrwxr-xr-x   1 jeldonmusic  wheel   58 Apr 12 13:04 axios -> ../../../node_modules/.pnpm/axios@1.8.4/node_modules/axios
+lrwxr-xr-x   1 jeldonmusic  wheel   82 Apr 12 13:04 class-transformer -> ../../../node_modules/.pnpm/class-transformer@0.5.1/node_modules/class-transformer
+lrwxr-xr-x   1 jeldonmusic  wheel   79 Apr 12 13:04 class-validator -> ../../../node_modules/.pnpm/class-validator@0.14.1/node_modules/class-validator
+lrwxr-xr-x   1 jeldonmusic  wheel   61 Apr 12 13:04 dotenv -> ../../../node_modules/.pnpm/dotenv@16.5.0/node_modules/dotenv
+lrwxr-xr-x   1 jeldonmusic  wheel  100 Apr 12 13:04 ethers -> ../../../node_modules/.pnpm/ethers@6.13.5_bufferutil@4.0.9_utf-8-validate@5.0.10/node_modules/ethers
+lrwxr-xr-x   1 jeldonmusic  wheel   64 Apr 12 13:04 graphql -> ../../../node_modules/.pnpm/graphql@16.10.0/node_modules/graphql
+lrwxr-xr-x   1 jeldonmusic  wheel   89 Apr 12 13:04 graphql-http -> ../../../node_modules/.pnpm/graphql-http@1.22.4_graphql@16.10.0/node_modules/graphql-http
+lrwxr-xr-x   1 jeldonmusic  wheel   97 Apr 12 13:04 ipfs-http-client -> ../../../node_modules/.pnpm/ipfs-http-client@60.0.1_encoding@0.1.13/node_modules/ipfs-http-client
+lrwxr-xr-x   1 jeldonmusic  wheel   73 Apr 12 13:04 multiformats -> ../../../node_modules/.pnpm/multiformats@13.3.2/node_modules/multiformats
+lrwxr-xr-x   1 jeldonmusic  wheel   74 Apr 12 13:04 opentelemetry -> ../../../node_modules/.pnpm/opentelemetry@0.1.0/node_modules/opentelemetry
+lrwxr-xr-x   1 jeldonmusic  wheel   64 Apr 12 13:04 prettier -> ../../../node_modules/.pnpm/prettier@3.5.3/node_modules/prettier
+lrwxr-xr-x   1 jeldonmusic  wheel   59 Apr 12 13:04 react -> ../../../node_modules/.pnpm/react@19.1.0/node_modules/react
+lrwxr-xr-x   1 jeldonmusic  wheel  124 Apr 12 13:04 react-router-dom -> ../../../node_modules/.pnpm/react-router-dom@7.4.1_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/react-router-dom
+lrwxr-xr-x   1 jeldonmusic  wheel   67 Apr 12 13:04 sequelize -> ../../../node_modules/.pnpm/sequelize@6.37.7/node_modules/sequelize
+lrwxr-xr-x   1 jeldonmusic  wheel   80 Apr 12 13:04 ts-retry-promise -> ../../../node_modules/.pnpm/ts-retry-promise@0.8.1/node_modules/ts-retry-promise
+lrwxr-xr-x   1 jeldonmusic  wheel  128 Apr 12 13:04 tsup -> ../../../node_modules/.pnpm/tsup@8.4.0_@swc+core@1.11.20_jiti@1.21.7_postcss@8.5.3_typescript@5.6.3_yaml@2.7.1/node_modules/tsup
+lrwxr-xr-x   1 jeldonmusic  wheel   64 Apr 12 13:04 tsyringe -> ../../../node_modules/.pnpm/tsyringe@4.9.1/node_modules/tsyringe
+lrwxr-xr-x   1 jeldonmusic  wheel   57 Apr 12 13:04 uuid -> ../../../node_modules/.pnpm/uuid@11.1.0/node_modules/uuid
+lrwxr-xr-x   1 jeldonmusic  wheel   67 Apr 12 13:04 wasm-pack -> ../../../node_modules/.pnpm/wasm-pack@0.13.1/node_modules/wasm-pack
+lrwxr-xr-x   1 jeldonmusic  wheel   63 Apr 12 13:04 winston -> ../../../node_modules/.pnpm/winston@3.17.0/node_modules/winston
+lrwxr-xr-x   1 jeldonmusic  wheel   55 Apr 12 13:04 zod -> ../../../node_modules/.pnpm/zod@3.24.2/node_modules/zod
+
+./python:
+total 0
+drwxr-xr-x   3 jeldonmusic  wheel   96 Apr  8 23:14 .
+drwxr-xr-x@ 26 jeldonmusic  wheel  832 Apr 12 13:20 ..
+-rw-r--r--   1 jeldonmusic  wheel    0 Apr  8 23:25 requirements.txt
+
+./ref-fvm:
+total 408
+drwxr-xr-x  27 jeldonmusic  wheel     864 Apr  6 19:34 .
+drwxr-xr-x@ 26 jeldonmusic  wheel     832 Apr 12 13:20 ..
+drwxr-xr-x   5 jeldonmusic  wheel     160 Apr  6 19:34 .clusterfuzzlite
+-rw-r--r--   1 jeldonmusic  wheel      63 Apr  6 19:34 .git
+drwxr-xr-x   3 jeldonmusic  wheel      96 Apr  6 19:34 .github
+-rw-r--r--   1 jeldonmusic  wheel     109 Apr  6 19:34 .gitignore
+-rw-r--r--   1 jeldonmusic  wheel     161 Apr  6 19:34 .gitmodules
+-rw-r--r--   1 jeldonmusic  wheel    6270 Apr  6 19:34 CONTRIBUTING.md
+-rw-r--r--   1 jeldonmusic  wheel  142269 Apr  6 19:34 Cargo.lock
+-rw-r--r--   1 jeldonmusic  wheel    2901 Apr  6 19:34 Cargo.toml
+-rw-r--r--   1 jeldonmusic  wheel     520 Apr  6 19:34 LICENSE-APACHE
+-rw-r--r--   1 jeldonmusic  wheel    1046 Apr  6 19:34 LICENSE-MIT
+-rw-r--r--   1 jeldonmusic  wheel     196 Apr  6 19:34 Makefile
+-rw-r--r--   1 jeldonmusic  wheel    5400 Apr  6 19:34 README.md
+-rw-r--r--   1 jeldonmusic  wheel    1906 Apr  6 19:34 SECURITY.md
+-rw-r--r--   1 jeldonmusic  wheel      49 Apr  6 19:34 codecov.yml
+-rw-r--r--   1 jeldonmusic  wheel     399 Apr  6 19:34 deny.toml
+drwxr-xr-x   5 jeldonmusic  wheel     160 Apr  6 19:34 doc
+drwxr-xr-x   6 jeldonmusic  wheel     192 Apr  6 19:34 fvm
+drwxr-xr-x   9 jeldonmusic  wheel     288 Apr  6 19:34 ipld
+-rw-r--r--   1 jeldonmusic  wheel     125 Apr  6 19:34 rust-toolchain.toml
+-rw-r--r--   1 jeldonmusic  wheel      23 Apr  6 19:34 rustfmt.toml
+drwxr-xr-x   4 jeldonmusic  wheel     128 Apr  6 19:34 scripts
+drwxr-xr-x   6 jeldonmusic  wheel     192 Apr  6 19:34 sdk
+drwxr-xr-x   6 jeldonmusic  wheel     192 Apr  6 19:34 shared
+drwxr-xr-x   9 jeldonmusic  wheel     288 Apr  6 19:34 testing
+drwxr-xr-x   5 jeldonmusic  wheel     160 Apr  6 19:34 tools
+
+./src:
+total 88
+drwxr-xr-x  18 jeldonmusic  wheel   576 Apr  9 01:27 .
+drwxr-xr-x@ 26 jeldonmusic  wheel   832 Apr 12 13:20 ..
+drwxr-xr-x   5 jeldonmusic  wheel   160 Apr  8 23:43 __test__
+drwxr-xr-x   8 jeldonmusic  wheel   256 Apr 10 13:55 agent
+drwxr-xr-x   3 jeldonmusic  wheel    96 Apr  6 17:23 backup
+-rw-r--r--   1 jeldonmusic  wheel   912 Apr  6 17:23 client.ts
+drwxr-xr-x   8 jeldonmusic  wheel   256 Apr  7 19:46 database
+-rw-r--r--   1 jeldonmusic  wheel  2946 Apr 10 12:28 encryption.ts
+drwxr-xr-x   3 jeldonmusic  wheel    96 Apr  9 01:27 errors
+-rw-r--r--   1 jeldonmusic  wheel  4083 Apr  7 19:46 filecoin-network.ts
+-rw-r--r--   1 jeldonmusic  wheel  5656 Apr  7 19:46 filecoin-rs-bindings.ts
+-rw-r--r--   1 jeldonmusic  wheel  6829 Apr  6 18:44 index.ts
+drwxr-xr-x   4 jeldonmusic  wheel   128 Apr  6 17:23 interop
+-rw-r--r--   1 jeldonmusic  wheel   513 Apr  6 17:23 logger.ts
+drwxr-xr-x   3 jeldonmusic  wheel    96 Apr  6 17:23 network
+-rw-r--r--   1 jeldonmusic  wheel  3629 Apr  6 17:23 performance-monitoring.ts
+-rw-r--r--   1 jeldonmusic  wheel   773 Apr  6 17:23 restore.ts
+-rw-r--r--   1 jeldonmusic  wheel  3541 Apr  8 23:42 types.ts
+
+./templates:
+total 8
+drwxr-xr-x   4 jeldonmusic  wheel   128 Apr  6 17:23 .
+drwxr-xr-x@ 26 jeldonmusic  wheel   832 Apr 12 13:20 ..
+-rw-r--r--   1 jeldonmusic  wheel     0 Apr  6 17:23 ProtectedRoute.tsx
+-rw-r--r--   1 jeldonmusic  wheel  1625 Apr  6 17:23 login.tsx

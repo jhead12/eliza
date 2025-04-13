@@ -6,7 +6,7 @@ import { connectToFilecoin, checkFilecoinConnection } from './database/filecoin'
 import { StorachaStorage } from './database/storacha-storage';
 import { FilecoinDatabaseAdapter } from './database/filecoin-adapter';
 import { v4 as uuidv4 } from 'uuid';
-import { AgentRuntime, Character, ModelProviderName } from '@elizaos/core';
+import { AgentRuntime, type Character, ModelProviderName } from '@elizaos/core';
 import logger from './logger';
 import 'dotenv/config';
 

@@ -1,6 +1,6 @@
 // packages/plugin-filecoin/src/backup.ts
 
-import { BackupOptions, FilecoinBackupResult } from '../types';
+import type { BackupOptions, FilecoinBackupResult } from '../types';
 import { backupDataLocal as wasmBackupDataLocal } from '../filecoin-rs-bindings';
 import logger from '../logger';
 

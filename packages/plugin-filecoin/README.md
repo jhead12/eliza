@@ -185,8 +185,3 @@ Extra Elements That Impress Judges
 Visual Presentation: A polished slide deck that communicates your vision, technical implementation, and potential impact.
 Interactive Demo: A live version judges can try themselves, making your project memorable.
 Technical Documentation: Showing the depth of your thinking and attention to detail.
-
-
-
-
-

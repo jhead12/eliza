@@ -1,9 +1,0 @@
-/Users/jeldonmusic/Documents/matrixblend_com/Elizaos2/eliza/packages/plugin-filecoin/filecoin-rs/target/wasm32-unknown-unknown/release/deps/libwasm_bindgen_futures-ff7e1ca8c07dae2a.rmeta: /Users/jeldonmusic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-futures-0.4.50/src/lib.rs /Users/jeldonmusic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-futures-0.4.50/src/queue.rs /Users/jeldonmusic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-futures-0.4.50/src/task/singlethread.rs
-
-/Users/jeldonmusic/Documents/matrixblend_com/Elizaos2/eliza/packages/plugin-filecoin/filecoin-rs/target/wasm32-unknown-unknown/release/deps/libwasm_bindgen_futures-ff7e1ca8c07dae2a.rlib: /Users/jeldonmusic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-futures-0.4.50/src/lib.rs /Users/jeldonmusic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-futures-0.4.50/src/queue.rs /Users/jeldonmusic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-futures-0.4.50/src/task/singlethread.rs
-
-/Users/jeldonmusic/Documents/matrixblend_com/Elizaos2/eliza/packages/plugin-filecoin/filecoin-rs/target/wasm32-unknown-unknown/release/deps/wasm_bindgen_futures-ff7e1ca8c07dae2a.d: /Users/jeldonmusic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-futures-0.4.50/src/lib.rs /Users/jeldonmusic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-futures-0.4.50/src/queue.rs /Users/jeldonmusic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-futures-0.4.50/src/task/singlethread.rs
-
-/Users/jeldonmusic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-futures-0.4.50/src/lib.rs:
-/Users/jeldonmusic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-futures-0.4.50/src/queue.rs:
-/Users/jeldonmusic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-futures-0.4.50/src/task/singlethread.rs:

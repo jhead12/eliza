@@ -49,6 +49,7 @@ export function encrypt(data: string): Uint8Array {
   }
 }
 
+
 /**
  * Decrypts data encrypted with AES-256-CBC.
  * @param data - A Uint8Array containing the IV (first 16 bytes) and encrypted data.
@@ -73,6 +74,14 @@ export function decrypt(data: Uint8Array, key: Buffer = ENCRYPTION_KEY): Uint8Ar
     throw new EncryptionError(`Failed to decrypt data: ${error instanceof Error ? error.message : 'Unknown error'}`);
   }
 }
+/**
+ * Checks if the provided key is valid for encryption/decryption.
+ * @param key - The key to validate.
+ * @returns True if the key is valid, false otherwise.
+ */
+export function isValidKey(key: Buffer): boolean {
+  return key.length === KEY_LENGTH;
+
 
 // Export constants for external use if needed
 export { ALGORITHM, ENCRYPTION_KEY, IV_LENGTH };

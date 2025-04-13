@@ -1,0 +1,204 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', monospace;
+  background: #000;
+  color: #0f0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+.game-container {
+  text-align: center;
+  width: 80%;
+  max-width: 800px;
+  position: relative;
+  z-index: 1;
+}
+
+#threejs-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.game-title h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #0f0;
+  text-shadow: 0 0 5px #0f0, 0 0 10px #0f0;
+  margin-bottom: 1.5rem;
+  animation: glitch 2s infinite;
+}
+
+.menu {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  border: 1px solid #0f0;
+  box-shadow: 0 0 10px #0f0;
+  position: relative;
+  z-index: 10;
+}
+
+.main-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  font-size: 1.2rem;
+  padding: 0.8rem;
+  margin: 0.3rem 0;
+  cursor: pointer;
+  background: rgba(0, 15, 0, 0.8);
+  border: 1px solid #0f0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.menu-item:hover {
+  background: #0f0;
+  color: #000;
+  transform: scale(1.05) translateZ(5px);
+  box-shadow: 0 0 10px #0f0;
+}
+
+.has-submenu {
+  padding-bottom: 0;
+}
+
+.submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid #0f0;
+  box-shadow: 0 5px 10px #0f0;
+  z-index: 20;
+}
+
+.has-submenu:hover .submenu {
+  display: block;
+}
+
+.submenu .menu-item {
+  font-size: 1rem;
+  margin: 0;
+  border: none;
+  border-bottom: 1px solid #0f0;
+}
+
+.submenu .menu-item:last-child {
+  border-bottom: none;
+}
+
+.avatar-placeholder {
+  width: 80px;
+  height: 80px;
+  background: rgba(0, 15, 0, 0.8);
+  border: 1px dashed #0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  margin: 0.5rem auto;
+}
+
+.content-wrapper {
+  transition: transform 0.5s ease-out;
+  transform-origin: top center;
+}
+
+.has-submenu:hover ~ .content-wrapper {
+  transform: translateY(50px) translateZ(-15px);
+}
+
+.game-footer {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #0f0;
+  text-shadow: 0 0 5px #0f0;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #0f0;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+/* Auth form styles (not in HTML, added for App.tsx) */
+.auth-section {
+  margin-top: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  border: 1px solid #0f0;
+  box-shadow: 0 0 10px #0f0;
+}
+
+.row {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.row input {
+  padding: 0.5rem;
+  font-family: 'Courier New', monospace;
+  background: rgba(0, 15, 0, 0.8);
+  border: 1px solid #0f0;
+  color: #0f0;
+  font-size: 1rem;
+}
+
+.row button {
+  padding: 0.5rem 1rem;
+  background: rgba(0, 15, 0, 0.8);
+  border: 1px solid #0f0;
+  color: #0f0;
+  font-family: 'Courier New', monospace;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.row button:hover {
+  background: #0f0;
+  color: #000;
+}
+
+.error {
+  color: #f00;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}

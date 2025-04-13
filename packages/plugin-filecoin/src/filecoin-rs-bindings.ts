@@ -1,8 +1,8 @@
 import { init, run as wasmRun, backup_data as wasmBackupData, restore_from_backup as wasmRestoreFromBackup, MyMachine } from '../filecoin-rs/pkg/filecoin_rs';
 import fs from 'fs/promises';
 import { storagePlugin } from '@storacha/elizaos-plugin';
-import { BackupMetadata as WasmBackupMetadata, FilecoinBackupResult as WasmFilecoinBackupResult } from '../filecoin-rs/pkg/filecoin_rs';
-import { RestoreOptions, FilecoinBackupResult } from './types';
+import { BackupMetadata as WasmBackupMetadata, type FilecoinBackupResult as WasmFilecoinBackupResult } from '../filecoin-rs/pkg/filecoin_rs';
+import type { RestoreOptions, FilecoinBackupResult } from './types';
 import { decrypt, encrypt } from './encryption';
 import { downloadFromStoracha } from './database/storacha';
 import logger from './logger';

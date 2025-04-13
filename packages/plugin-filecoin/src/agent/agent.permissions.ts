@@ -41,7 +41,7 @@ const defaultFilecoinClient: FilecoinClient = {
 };
 
 // Utility functions with proper error handling
-const encryptData = (data: string, algorithm: string = 'AES-GCM'): Uint8Array => {
+const encryptData = (data: string, algorithm = 'AES-GCM'): Uint8Array => {
   try {
     return new TextEncoder().encode(data);
     // Add real encryption implementation here (e.g., Web Crypto API)
