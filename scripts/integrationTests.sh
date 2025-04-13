@@ -12,6 +12,18 @@ fi
 # Navigate to the script's directory
 cd "$(dirname "$0")"/..
 
+wait
+# Check if the required directories exist
+if [ ! -d "tests" ]; then
+    echo "Error: 'tests' directory does not exist."
+    exit 1
+fi
+if [ ! -d "scripts" ]; then
+    echo "Error: 'scripts' directory does not exist."
+    exit 1
+fi
+# Check if the required files exist
+
 cd tests
 node test1.mjs
 
